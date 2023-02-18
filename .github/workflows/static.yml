@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <style>
+      .slideshow {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+      }
+
+      .slideshow img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease;
+      }
+
+      .slideshow img.active {
+        opacity: 1;
+      }
+    </style>
+    
+    <style>
+        .menu {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          background-color: #333;
+          color: #fff;
+        }
+  
+        .menu a {
+          color: #fff;
+          text-decoration: none;
+          margin-right: 10px;
+        }
+      </style>
+      <style>
+        h1 {
+          font-size: 36px;
+          text-align: center;
+        }
+      </style>
+       <title>Lucena T.I</title>
+  </head>
+  
+  <body>
+    <div class="slideshow">
+      <img src="slide/image1.jpeg" class="active">
+      <img src="slide/image2.jpeg">
+      <img src="slide/image3.jpeg">
+    </div>
+     
+    <script>
+      const slideshow = document.querySelector(".slideshow");
+      const images = document.querySelectorAll(".slideshow img");
+      let index = 0;
+
+      setInterval(() => {
+        images[index].classList.remove("active");
+        index = (index + 1) % images.length;
+        images[index].classList.add("active");
+      }, 3000);
+    </script>
+    <h1> 👨‍💻  Lucena T.I 💻</h1>
+    <nav class="menu">
+        <a href="Lucena T.I.html">INICIO</a>
+        <a href="pags/download.html">DOWNLOAD</a>
+        <a href="pags/PROJETOS.html">PROJETOS</a>
+        <a href="pags/SERVICES.html">SERVICES</a>
+        <a href="#">CONTATO</a>
+      </nav>
+      
+</html>
